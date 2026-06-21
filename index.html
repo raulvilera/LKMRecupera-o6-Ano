@@ -107,8 +107,8 @@
     }
 
     .main {
-      padding: 20px 16px;
-      max-width: 700px;
+      padding: 20px 24px;
+      max-width: 960px;
       margin: 0 auto;
     }
 
@@ -190,7 +190,7 @@
       background: linear-gradient(145deg, #1a2236, #0f172a);
       border: 1px solid #2a3a5c;
       border-radius: var(--radius);
-      padding: 20px;
+      padding: 24px 28px;
       margin-bottom: 14px;
       box-shadow: 0 12px 18px -8px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(88, 166, 255, 0.2);
       background-image: radial-gradient(circle at 30% 20%, rgba(30, 60, 114, 0.5) 0%, rgba(20, 50, 80, 0.2) 60%, transparent 90%),
@@ -224,43 +224,43 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       position: relative;
       z-index: 1;
     }
     .q-num-badge {
       font-family: 'Nunito', sans-serif;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 900;
       background: rgba(20, 40, 70, 0.7);
       border: 1px solid #2a3a5c;
       border-radius: 20px;
-      padding: 3px 10px;
+      padding: 4px 14px;
       color: var(--accent);
       letter-spacing: 0.3px;
     }
     .q-theme {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
       color: var(--warn);
       text-transform: uppercase;
       letter-spacing: 0.8px;
       text-align: right;
-      max-width: 200px;
+      max-width: 240px;
       line-height: 1.3;
       background: rgba(227, 179, 65, 0.08);
-      padding: 2px 10px;
+      padding: 4px 14px;
       border-radius: 12px;
       border: 1px solid rgba(227, 179, 65, 0.15);
     }
 
     .q-text {
       font-family: 'Nunito', sans-serif;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 700;
       color: var(--text);
-      line-height: 1.55;
-      margin-bottom: 16px;
+      line-height: 1.6;
+      margin-bottom: 18px;
       position: relative;
       z-index: 1;
     }
@@ -268,7 +268,7 @@
     /* IMAGE CONTAINER */
     .q-image-container {
       width: 100%;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
       border-radius: var(--radius-sm);
       overflow: hidden;
       border: 1px solid var(--border);
@@ -287,22 +287,22 @@
     .options {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
       position: relative;
       z-index: 1;
     }
     .option {
       display: flex;
       align-items: flex-start;
-      gap: 11px;
+      gap: 14px;
       background: rgba(10, 20, 40, 0.6);
       border: 1.5px solid #2a3a5c;
       border-radius: var(--radius-sm);
-      padding: 12px 14px;
+      padding: 14px 18px;
       cursor: pointer;
       transition: all 0.18s;
-      font-size: 13px;
-      line-height: 1.45;
+      font-size: 14px;
+      line-height: 1.5;
       text-align: left;
       width: 100%;
       color: var(--text);
@@ -346,15 +346,15 @@
       cursor: default;
     }
     .opt-letter {
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       background: rgba(10, 20, 40, 0.8);
       border: 1.5px solid #2a3a5c;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 800;
       flex-shrink: 0;
       transition: all 0.18s;
@@ -373,11 +373,11 @@
     /* FEEDBACK per question */
     .q-feedback {
       display: none;
-      margin-top: 12px;
+      margin-top: 14px;
       border-radius: var(--radius-sm);
-      padding: 12px 14px;
-      font-size: 13px;
-      line-height: 1.55;
+      padding: 14px 18px;
+      font-size: 14px;
+      line-height: 1.6;
       position: relative;
       z-index: 1;
     }
@@ -400,16 +400,16 @@
       z-index: 10;
       background: var(--surface);
       border-bottom: 1px solid var(--border);
-      padding: 10px 16px;
+      padding: 12px 20px;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
+      gap: 16px;
+      margin-bottom: 18px;
     }
     .progress-strip.visible {
       display: flex;
     }
     .progress-label {
-      font-size: 12px;
+      font-size: 13px;
       color: var(--muted);
       font-weight: 600;
       white-space: nowrap;
@@ -419,24 +419,24 @@
     }
     .progress-bar {
       flex: 1;
-      height: 6px;
+      height: 8px;
       background: var(--surface2);
-      border-radius: 3px;
+      border-radius: 4px;
       overflow: hidden;
     }
     .progress-fill {
       height: 100%;
       background: linear-gradient(90deg, #1f6feb, #58a6ff);
-      border-radius: 3px;
+      border-radius: 4px;
       transition: width 0.3s;
     }
     .progress-dots {
       display: flex;
-      gap: 4px;
+      gap: 6px;
     }
     .dot {
-      width: 10px;
-      height: 10px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       background: var(--border);
       transition: background 0.2s;
@@ -457,8 +457,8 @@
 
     /* SUBMIT BTN */
     .submit-area {
-      margin-top: 4px;
-      margin-bottom: 28px;
+      margin-top: 6px;
+      margin-bottom: 30px;
     }
     .btn-submit {
       width: 100%;
@@ -467,9 +467,9 @@
       border-radius: var(--radius-sm);
       color: #fff;
       font-family: 'Nunito', sans-serif;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 900;
-      padding: 15px;
+      padding: 16px;
       cursor: pointer;
       transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
       box-shadow: 0 4px 16px rgba(31, 111, 235, 0.35);
@@ -485,9 +485,9 @@
     }
     .submit-hint {
       text-align: center;
-      font-size: 12px;
+      font-size: 13px;
       color: var(--muted);
-      margin-top: 8px;
+      margin-top: 10px;
     }
 
     /* RESULT */
@@ -500,23 +500,23 @@
 
     .result-hero {
       text-align: center;
-      padding: 28px 20px 22px;
+      padding: 32px 24px 26px;
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
     .result-emoji {
-      font-size: 54px;
+      font-size: 60px;
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .result-score {
       font-family: 'Nunito', sans-serif;
-      font-size: 52px;
+      font-size: 56px;
       font-weight: 900;
       line-height: 1;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
     .score-green {
       color: var(--accent2);
@@ -530,11 +530,11 @@
     .stars-row {
       display: flex;
       justify-content: center;
-      gap: 5px;
-      margin: 8px 0 12px;
+      gap: 6px;
+      margin: 10px 0 14px;
     }
     .star {
-      font-size: 26px;
+      font-size: 28px;
       filter: grayscale(1) opacity(0.3);
       transition: all 0.3s;
     }
@@ -543,20 +543,20 @@
       transform: scale(1.1);
     }
     .result-name {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 700;
       color: var(--accent4);
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
     .result-turma {
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-    .result-msg {
       font-size: 13px;
       color: var(--muted);
-      max-width: 340px;
+      margin-bottom: 14px;
+    }
+    .result-msg {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 380px;
       margin: 0 auto;
       line-height: 1.6;
     }
@@ -565,13 +565,13 @@
     .sending-banner {
       display: none;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       background: rgba(88, 166, 255, 0.1);
       border: 1px solid rgba(88, 166, 255, 0.3);
       border-radius: var(--radius-sm);
-      padding: 12px 16px;
-      margin-bottom: 14px;
-      font-size: 13px;
+      padding: 14px 20px;
+      margin-bottom: 16px;
+      font-size: 14px;
       color: var(--accent);
       font-weight: 600;
     }
@@ -589,8 +589,8 @@
       color: var(--accent2);
     }
     .spinner {
-      width: 14px;
-      height: 14px;
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
       border: 2px solid rgba(88, 166, 255, 0.3);
       border-top-color: var(--accent);
@@ -607,22 +607,22 @@
     .review-list {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-bottom: 16px;
+      gap: 12px;
+      margin-bottom: 18px;
     }
     .review-item {
       background: var(--surface2);
       border: 1px solid var(--border);
       border-radius: var(--radius-sm);
-      padding: 12px 14px;
-      font-size: 13px;
+      padding: 14px 18px;
+      font-size: 14px;
       line-height: 1.5;
     }
     .review-item.ok {
-      border-left: 3px solid var(--accent2);
+      border-left: 4px solid var(--accent2);
     }
     .review-item.fail {
-      border-left: 3px solid var(--accent3);
+      border-left: 4px solid var(--accent3);
     }
     .review-qtext {
       font-weight: 600;
@@ -631,7 +631,7 @@
     }
     .review-detail {
       color: var(--muted);
-      font-size: 12px;
+      font-size: 13px;
     }
     .green {
       color: var(--accent2);
@@ -642,26 +642,64 @@
 
     .card-title {
       font-family: 'Nunito', sans-serif;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 800;
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     ::-webkit-scrollbar {
-      width: 6px;
+      width: 8px;
     }
     ::-webkit-scrollbar-track {
       background: var(--bg);
     }
     ::-webkit-scrollbar-thumb {
       background: var(--border);
-      border-radius: 3px;
+      border-radius: 4px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .main {
+        padding: 16px;
+        max-width: 100%;
+      }
+      .q-card {
+        padding: 18px 16px;
+      }
+      .q-text {
+        font-size: 15px;
+      }
+      .option {
+        font-size: 13px;
+        padding: 12px 14px;
+      }
+      .q-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+      .q-theme {
+        text-align: left;
+        max-width: 100%;
+        font-size: 11px;
+      }
+      .header-title {
+        font-size: 17px;
+      }
+      .id-row {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .student-chip {
+        align-self: flex-start;
+      }
     }
   </style>
 </head>
@@ -731,7 +769,7 @@
         <div class="result-turma" id="res-turma"></div>
         <div class="result-msg" id="res-msg"></div>
       </div>
-      <div class="q-card" style="margin-bottom:14px">
+      <div class="q-card" style="margin-bottom:16px">
         <div class="card-title"><span>📋</span> Revisão das Questões</div>
         <div class="review-list" id="review-list"></div>
       </div>
