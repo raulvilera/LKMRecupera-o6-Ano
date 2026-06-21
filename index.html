@@ -1,819 +1,1199 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Recuperação – Ciências – 6º Ano</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperação – Ciências – 6º Ano</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-  :root {
-    --bg: #0d1117;
-    --surface: #161b22;
-    --surface2: #1c2333;
-    --border: #30363d;
-    --accent: #58a6ff;
-    --accent2: #3fb950;
-    --accent3: #f78166;
-    --accent4: #d2a8ff;
-    --warn: #e3b341;
-    --text: #e6edf3;
-    --muted: #8b949e;
-    --card-bg: #21262d;
-    --radius: 14px;
-    --radius-sm: 8px;
-  }
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface2: #1c2333;
+      --border: #30363d;
+      --accent: #58a6ff;
+      --accent2: #3fb950;
+      --accent3: #f78166;
+      --accent4: #d2a8ff;
+      --warn: #e3b341;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --card-bg: #21262d;
+      --radius: 14px;
+      --radius-sm: 8px;
+      --shadow-card: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  body {
-    font-family: 'Space Grotesk', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-  }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
 
-  /* HEADER */
-  .header {
-    background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1a1f2e 100%);
-    border-bottom: 1px solid var(--border);
-    padding: 18px 24px 14px;
-    display: flex; align-items: center; gap: 16px;
-    position: relative; overflow: hidden;
-  }
-  .header::before {
-    content: '';
-    position: absolute; top: -40px; left: -40px;
-    width: 200px; height: 200px;
-    background: radial-gradient(circle, rgba(88,166,255,0.15) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .header-icon {
-    width: 50px; height: 50px;
-    background: linear-gradient(135deg, #1f6feb, #388bfd);
-    border-radius: 12px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 24px;
-    box-shadow: 0 4px 16px rgba(31,111,235,0.4);
-    flex-shrink: 0;
-  }
-  .header-text { flex: 1; }
-  .header-label { font-size: 11px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 2px; }
-  .header-title { font-family: 'Nunito', sans-serif; font-size: 19px; font-weight: 900; color: var(--text); line-height: 1.2; }
-  .header-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
-  .header-badge { background: rgba(63,185,80,0.15); border: 1px solid rgba(63,185,80,0.3); color: var(--accent2); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; white-space: nowrap; }
+    /* HEADER */
+    .header {
+      background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1a1f2e 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 24px 14px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 3mm;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: -40px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(88, 166, 255, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .header-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #1f6feb, #388bfd);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 4px 16px rgba(31, 111, 235, 0.4);
+      flex-shrink: 0;
+    }
+    .header-text {
+      flex: 1;
+    }
+    .header-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 2px;
+    }
+    .header-title {
+      font-family: 'Nunito', sans-serif;
+      font-size: 19px;
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1.2;
+    }
+    .header-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .header-badge {
+      background: rgba(63, 185, 80, 0.15);
+      border: 1px solid rgba(63, 185, 80, 0.3);
+      color: var(--accent2);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
 
-  .main { padding: 20px 16px; max-width: 700px; margin: 0 auto; }
+    .main {
+      padding: 20px 16px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
-  /* ID ROW */
-  .id-row { display: flex; gap: 12px; margin-bottom: 20px; align-items: flex-end; }
-  .id-row .sel-group { flex: 1; }
-  .sel-label { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
-  select {
-    width: 100%;
-    background: var(--card-bg);
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius-sm);
-    color: var(--text);
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 14px;
-    padding: 11px 36px 11px 14px;
-    outline: none; cursor: pointer; appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238b949e' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat; background-position: right 14px center;
-    transition: border-color 0.2s;
-  }
-  select:focus { border-color: var(--accent); }
-  select:disabled { opacity: 0.4; cursor: not-allowed; }
-  select option { background: var(--surface2); }
+    /* ID ROW */
+    .id-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      align-items: flex-end;
+    }
+    .id-row .sel-group {
+      flex: 1;
+    }
+    .sel-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    select {
+      width: 100%;
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      padding: 11px 36px 11px 14px;
+      outline: none;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238b949e' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      transition: border-color 0.2s;
+    }
+    select:focus {
+      border-color: var(--accent);
+    }
+    select:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    select option {
+      background: var(--surface2);
+    }
 
-  /* STUDENT CHIP */
-  .student-chip {
-    display: none; align-items: center; gap: 6px;
-    background: rgba(210,168,255,0.12); border: 1px solid rgba(210,168,255,0.25);
-    border-radius: 20px; padding: 5px 14px;
-    font-size: 12px; font-weight: 700; color: var(--accent4);
-    white-space: nowrap; flex-shrink: 0;
-  }
-  .student-chip.visible { display: flex; }
+    /* STUDENT CHIP */
+    .student-chip {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      background: rgba(210, 168, 255, 0.12);
+      border: 1px solid rgba(210, 168, 255, 0.25);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent4);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .student-chip.visible {
+      display: flex;
+    }
 
-  /* QUESTIONS CONTAINER */
-  #questions-container { display: none; }
-  #questions-container.visible { display: block; }
+    /* QUESTIONS CONTAINER */
+    #questions-container {
+      display: none;
+    }
+    #questions-container.visible {
+      display: block;
+    }
 
-  /* QUESTION CARD */
-  .q-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 20px;
-    margin-bottom: 14px;
-    transition: border-color 0.2s;
-  }
-  .q-card.answered-correct { border-color: rgba(63,185,80,0.4); }
-  .q-card.answered-wrong   { border-color: rgba(247,129,102,0.4); }
+    /* QUESTION CARD - DESIGN COM SOMBREAMENTO E RELEVO */
+    .q-card {
+      background: linear-gradient(145deg, #1a2236, #0f172a);
+      border: 1px solid #2a3a5c;
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 14px;
+      box-shadow: 0 12px 18px -8px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(88, 166, 255, 0.2);
+      background-image: radial-gradient(circle at 30% 20%, rgba(30, 60, 114, 0.5) 0%, rgba(20, 50, 80, 0.2) 60%, transparent 90%),
+                        linear-gradient(145deg, #0b1a2e, #0d1f33);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .q-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #1f6feb, #3fb950);
+      opacity: 0.7;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
 
-  .q-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-  .q-num-badge {
-    font-family: 'Nunito', sans-serif;
-    font-size: 12px; font-weight: 900;
-    background: var(--surface2); border: 1px solid var(--border);
-    border-radius: 20px; padding: 3px 10px; color: var(--muted);
-  }
-  .q-theme { font-size: 11px; font-weight: 700; color: var(--warn); text-transform: uppercase; letter-spacing: 0.8px; text-align: right; max-width: 200px; line-height: 1.3; }
+    .q-card.answered-correct {
+      border-color: rgba(63, 185, 80, 0.5);
+      box-shadow: 0 12px 18px -8px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(63, 185, 80, 0.3);
+    }
+    .q-card.answered-wrong {
+      border-color: rgba(247, 129, 102, 0.4);
+      box-shadow: 0 12px 18px -8px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(247, 129, 102, 0.2);
+    }
 
-  .q-text {
-    font-family: 'Nunito', sans-serif;
-    font-size: 15px; font-weight: 700; color: var(--text);
-    line-height: 1.55; margin-bottom: 16px;
-  }
+    .q-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+    .q-num-badge {
+      font-family: 'Nunito', sans-serif;
+      font-size: 12px;
+      font-weight: 900;
+      background: rgba(20, 40, 70, 0.7);
+      border: 1px solid #2a3a5c;
+      border-radius: 20px;
+      padding: 3px 10px;
+      color: var(--accent);
+      letter-spacing: 0.3px;
+    }
+    .q-theme {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--warn);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      text-align: right;
+      max-width: 200px;
+      line-height: 1.3;
+      background: rgba(227, 179, 65, 0.08);
+      padding: 2px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(227, 179, 65, 0.15);
+    }
 
-  /* IMAGE CONTAINER */
-  .q-image-container {
-    width: 100%;
-    margin-bottom: 16px;
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    border: 1px solid var(--border);
-    background: #fff;
-  }
-  .q-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    max-height: 350px;
-    margin: 0 auto;
-  }
+    .q-text {
+      font-family: 'Nunito', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.55;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
 
-  /* OPTIONS */
-  .options { display: flex; flex-direction: column; gap: 8px; }
-  .option {
-    display: flex; align-items: flex-start; gap: 11px;
-    background: var(--surface2); border: 1.5px solid var(--border);
-    border-radius: var(--radius-sm); padding: 12px 14px;
-    cursor: pointer; transition: all 0.18s;
-    font-size: 13px; line-height: 1.45; text-align: left; width: 100%; color: var(--text);
-  }
-  .option:hover:not(.locked) { border-color: var(--accent); background: rgba(88,166,255,0.08); }
-  .option.selected { border-color: var(--accent); background: rgba(88,166,255,0.1); }
-  .option.correct  { border-color: var(--accent2); background: rgba(63,185,80,0.12); }
-  .option.wrong    { border-color: var(--accent3); background: rgba(247,129,102,0.1); }
-  .option.locked   { cursor: default; }
-  .opt-letter {
-    width: 24px; height: 24px; border-radius: 50%;
-    background: var(--surface); border: 1.5px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 11px; font-weight: 800; flex-shrink: 0; transition: all 0.18s;
-  }
-  .option.selected .opt-letter { background: var(--accent); border-color: var(--accent); color:#fff; }
-  .option.correct  .opt-letter { background: var(--accent2); border-color: var(--accent2); color:#fff; }
-  .option.wrong    .opt-letter { background: var(--accent3); border-color: var(--accent3); color:#fff; }
+    /* IMAGE CONTAINER */
+    .q-image-container {
+      width: 100%;
+      margin-bottom: 16px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+    .q-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      max-height: 350px;
+      margin: 0 auto;
+    }
 
-  /* FEEDBACK per question */
-  .q-feedback {
-    display: none; margin-top: 12px;
-    border-radius: var(--radius-sm); padding: 12px 14px;
-    font-size: 13px; line-height: 1.55;
-  }
-  .q-feedback.correct { background: rgba(63,185,80,0.10); border:1px solid rgba(63,185,80,0.25); color:#85e89d; }
-  .q-feedback.wrong   { background: rgba(247,129,102,0.10); border:1px solid rgba(247,129,102,0.25); color:#f97583; }
+    /* OPTIONS */
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
+      z-index: 1;
+    }
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      background: rgba(10, 20, 40, 0.6);
+      border: 1.5px solid #2a3a5c;
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: all 0.18s;
+      font-size: 13px;
+      line-height: 1.45;
+      text-align: left;
+      width: 100%;
+      color: var(--text);
+      backdrop-filter: blur(2px);
+    }
+    .option:hover:not(.locked) {
+      border-color: var(--accent);
+      background: rgba(88, 166, 255, 0.08);
+    }
 
-  /* PROGRESS STRIP */
-  .progress-strip {
-    display: none; position: sticky; top: 0; z-index: 10;
-    background: var(--surface); border-bottom: 1px solid var(--border);
-    padding: 10px 16px; align-items: center; gap: 12px;
-    margin-bottom: 16px;
-  }
-  .progress-strip.visible { display: flex; }
-  .progress-label { font-size: 12px; color: var(--muted); font-weight: 600; white-space: nowrap; }
-  .progress-label strong { color: var(--text); }
-  .progress-bar { flex: 1; height: 6px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
-  .progress-fill { height: 100%; background: linear-gradient(90deg, #1f6feb, #58a6ff); border-radius: 3px; transition: width 0.3s; }
-  .progress-dots { display: flex; gap: 4px; }
-  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); transition: background 0.2s; flex-shrink: 0; }
-  .dot.ok   { background: var(--accent2); }
-  .dot.fail { background: var(--accent3); }
-  .dot.skip { background: var(--warn); }
-  .dot.pending { background: var(--warn); }
+    /* ESTILO PARA ALTERNATIVA SELECIONADA PELO ALUNO - ALTO RELEVO E DEGRADÊ VERDE/AMARELO */
+    .option.selected {
+      background: linear-gradient(145deg, #2d8f47, #b8b82b) !important;
+      border-color: #7cb342 !important;
+      color: #fff !important;
+      font-weight: 700 !important;
+      box-shadow: 
+        0 4px 15px rgba(60, 180, 60, 0.5),
+        inset 0 -3px 0 rgba(0, 0, 0, 0.3),
+        inset 0 3px 8px rgba(255, 255, 255, 0.3) !important;
+      transform: translateY(-2px);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
 
-  /* SUBMIT BTN */
-  .submit-area { margin-top: 4px; margin-bottom: 28px; }
-  .btn-submit {
-    width: 100%;
-    background: linear-gradient(135deg, #1f6feb, #388bfd);
-    border: none; border-radius: var(--radius-sm);
-    color: #fff; font-family: 'Nunito', sans-serif;
-    font-size: 16px; font-weight: 900; padding: 15px;
-    cursor: pointer; transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
-    box-shadow: 0 4px 16px rgba(31,111,235,0.35);
-  }
-  .btn-submit:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(31,111,235,0.45); }
-  .btn-submit:disabled { opacity: 0.35; cursor: not-allowed; transform: none; }
-  .submit-hint { text-align: center; font-size: 12px; color: var(--muted); margin-top: 8px; }
+    .option.selected .opt-letter {
+      background: rgba(0, 0, 0, 0.25) !important;
+      border-color: rgba(255, 255, 255, 0.4) !important;
+      color: #fff !important;
+      box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.3);
+    }
 
-  /* RESULT */
-  #result-wrapper { display: none; }
-  #result-wrapper.visible { display: block; }
+    .option.correct {
+      border-color: var(--accent2);
+      background: rgba(63, 185, 80, 0.15);
+    }
+    .option.wrong {
+      border-color: var(--accent3);
+      background: rgba(247, 129, 102, 0.1);
+    }
+    .option.locked {
+      cursor: default;
+    }
+    .opt-letter {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(10, 20, 40, 0.8);
+      border: 1.5px solid #2a3a5c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      flex-shrink: 0;
+      transition: all 0.18s;
+    }
+    .option.correct .opt-letter {
+      background: var(--accent2);
+      border-color: var(--accent2);
+      color: #fff;
+    }
+    .option.wrong .opt-letter {
+      background: var(--accent3);
+      border-color: var(--accent3);
+      color: #fff;
+    }
 
-  .result-hero {
-    text-align: center; padding: 28px 20px 22px;
-    background: var(--card-bg); border: 1px solid var(--border);
-    border-radius: var(--radius); margin-bottom: 14px;
-  }
-  .result-emoji { font-size: 54px; display: block; margin-bottom: 10px; }
-  .result-score { font-family: 'Nunito', sans-serif; font-size: 52px; font-weight: 900; line-height: 1; margin-bottom: 6px; }
-  .score-green { color: var(--accent2); }
-  .score-yellow { color: var(--warn); }
-  .score-red { color: var(--accent3); }
-  .stars-row { display: flex; justify-content: center; gap: 5px; margin: 8px 0 12px; }
-  .star { font-size: 26px; filter: grayscale(1) opacity(0.3); transition: all 0.3s; }
-  .star.lit { filter: none; transform: scale(1.1); }
-  .result-name  { font-size: 15px; font-weight: 700; color: var(--accent4); margin-bottom: 3px; }
-  .result-turma { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
-  .result-msg   { font-size: 13px; color: var(--muted); max-width: 340px; margin: 0 auto; line-height: 1.6; }
+    /* FEEDBACK per question */
+    .q-feedback {
+      display: none;
+      margin-top: 12px;
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      font-size: 13px;
+      line-height: 1.55;
+      position: relative;
+      z-index: 1;
+    }
+    .q-feedback.correct {
+      background: rgba(63, 185, 80, 0.10);
+      border: 1px solid rgba(63, 185, 80, 0.25);
+      color: #85e89d;
+    }
+    .q-feedback.wrong {
+      background: rgba(247, 129, 102, 0.10);
+      border: 1px solid rgba(247, 129, 102, 0.25);
+      color: #f97583;
+    }
 
-  /* SENDING STATE */
-  .sending-banner {
-    display: none; align-items: center; gap: 10px;
-    background: rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.3);
-    border-radius: var(--radius-sm); padding: 12px 16px; margin-bottom: 14px;
-    font-size: 13px; color: var(--accent); font-weight: 600;
-  }
-  .sending-banner.visible { display: flex; }
-  .sending-banner.error { background: rgba(247,129,102,0.1); border-color: rgba(247,129,102,0.3); color: var(--accent3); }
-  .sending-banner.ok { background: rgba(63,185,80,0.1); border-color: rgba(63,185,80,0.3); color: var(--accent2); }
-  .spinner {
-    width: 14px; height: 14px; border-radius: 50%;
-    border: 2px solid rgba(88,166,255,0.3); border-top-color: var(--accent);
-    animation: spin 0.7s linear infinite; flex-shrink: 0;
-  }
-  @keyframes spin { to { transform: rotate(360deg); } }
+    /* PROGRESS STRIP */
+    .progress-strip {
+      display: none;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 16px;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .progress-strip.visible {
+      display: flex;
+    }
+    .progress-label {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .progress-label strong {
+      color: var(--text);
+    }
+    .progress-bar {
+      flex: 1;
+      height: 6px;
+      background: var(--surface2);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #1f6feb, #58a6ff);
+      border-radius: 3px;
+      transition: width 0.3s;
+    }
+    .progress-dots {
+      display: flex;
+      gap: 4px;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--border);
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .dot.ok {
+      background: var(--accent2);
+    }
+    .dot.fail {
+      background: var(--accent3);
+    }
+    .dot.skip {
+      background: var(--warn);
+    }
+    .dot.pending {
+      background: var(--warn);
+    }
 
-  /* REVIEW */
-  .review-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
-  .review-item {
-    background: var(--surface2); border: 1px solid var(--border);
-    border-radius: var(--radius-sm); padding: 12px 14px;
-    font-size: 13px; line-height: 1.5;
-  }
-  .review-item.ok   { border-left: 3px solid var(--accent2); }
-  .review-item.fail { border-left: 3px solid var(--accent3); }
-  .review-qtext  { font-weight: 600; color: var(--text); margin-bottom: 4px; }
-  .review-detail { color: var(--muted); font-size: 12px; }
-  .green { color: var(--accent2); } .red { color: var(--accent3); }
+    /* SUBMIT BTN */
+    .submit-area {
+      margin-top: 4px;
+      margin-bottom: 28px;
+    }
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, #1f6feb, #388bfd);
+      border: none;
+      border-radius: var(--radius-sm);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      font-weight: 900;
+      padding: 15px;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
+      box-shadow: 0 4px 16px rgba(31, 111, 235, 0.35);
+    }
+    .btn-submit:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(31, 111, 235, 0.45);
+    }
+    .btn-submit:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .submit-hint {
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
 
-  .card-title { font-family:'Nunito',sans-serif; font-size:13px; font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:14px; display:flex; align-items:center; gap:8px; }
+    /* RESULT */
+    #result-wrapper {
+      display: none;
+    }
+    #result-wrapper.visible {
+      display: block;
+    }
 
-  .btn-retry {
-    width: 100%; background: var(--surface2); border: 1px solid var(--border);
-    border-radius: var(--radius-sm); color: var(--text);
-    font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800;
-    padding: 13px; cursor: pointer; transition: background 0.2s;
-  }
-  .btn-retry:hover { background: var(--border); }
+    .result-hero {
+      text-align: center;
+      padding: 28px 20px 22px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 14px;
+    }
+    .result-emoji {
+      font-size: 54px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .result-score {
+      font-family: 'Nunito', sans-serif;
+      font-size: 52px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .score-green {
+      color: var(--accent2);
+    }
+    .score-yellow {
+      color: var(--warn);
+    }
+    .score-red {
+      color: var(--accent3);
+    }
+    .stars-row {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin: 8px 0 12px;
+    }
+    .star {
+      font-size: 26px;
+      filter: grayscale(1) opacity(0.3);
+      transition: all 0.3s;
+    }
+    .star.lit {
+      filter: none;
+      transform: scale(1.1);
+    }
+    .result-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--accent4);
+      margin-bottom: 3px;
+    }
+    .result-turma {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .result-msg {
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 340px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
 
-  ::-webkit-scrollbar { width: 6px; }
-  ::-webkit-scrollbar-track { background: var(--bg); }
-  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-</style>
+    /* SENDING STATE */
+    .sending-banner {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      background: rgba(88, 166, 255, 0.1);
+      border: 1px solid rgba(88, 166, 255, 0.3);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      margin-bottom: 14px;
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .sending-banner.visible {
+      display: flex;
+    }
+    .sending-banner.error {
+      background: rgba(247, 129, 102, 0.1);
+      border-color: rgba(247, 129, 102, 0.3);
+      color: var(--accent3);
+    }
+    .sending-banner.ok {
+      background: rgba(63, 185, 80, 0.1);
+      border-color: rgba(63, 185, 80, 0.3);
+      color: var(--accent2);
+    }
+    .spinner {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid rgba(88, 166, 255, 0.3);
+      border-top-color: var(--accent);
+      animation: spin 0.7s linear infinite;
+      flex-shrink: 0;
+    }
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* REVIEW */
+    .review-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .review-item {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .review-item.ok {
+      border-left: 3px solid var(--accent2);
+    }
+    .review-item.fail {
+      border-left: 3px solid var(--accent3);
+    }
+    .review-qtext {
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .review-detail {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .green {
+      color: var(--accent2);
+    }
+    .red {
+      color: var(--accent3);
+    }
+
+    .card-title {
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 3px;
+    }
+  </style>
 </head>
 <body>
 
-<div class="header">
-  <div class="header-icon">🔬</div>
-  <div class="header-text">
-    <div class="header-label">E.E. Lydia Kitz Moreira</div>
-    <div class="header-title">Recuperação – Ciências</div>
-    <div class="header-sub">6º Ano &nbsp;|&nbsp; Prof. Raul Pereira Vilera Jr.</div>
-  </div>
-  <div class="header-badge">10 Questões</div>
-</div>
-
-<div class="main">
-
-  <!-- IDENTIFICAÇÃO -->
-  <div class="id-row">
-    <div class="sel-group">
-      <div class="sel-label">Turma</div>
-      <select id="sel-turma" onchange="onTurmaChange()">
-        <option value="">— Selecione —</option>
-        <option value="6A">6º Ano A</option>
-        <option value="6B">6º Ano B</option>
-        <option value="6C">6º Ano C</option>
-      </select>
+  <div class="header">
+    <div class="header-icon">🔬</div>
+    <div class="header-text">
+      <div class="header-label">E.E. Lydia Kitz Moreira</div>
+      <div class="header-title">Recuperação – Ciências</div>
+      <div class="header-sub">6º Ano &nbsp;|&nbsp; Prof. Raul Pereira Vilera Jr.</div>
     </div>
-    <div class="sel-group">
-      <div class="sel-label">Seu nome</div>
-      <select id="sel-aluno" disabled onchange="onAlunoChange()">
-        <option value="">— Selecione a turma —</option>
-      </select>
-    </div>
-    <div class="student-chip" id="student-chip">👤</div>
+    <div class="header-badge">10 Questões</div>
   </div>
 
-  <!-- PROGRESS STRIP (sticky) -->
-  <div class="progress-strip" id="progress-strip">
-    <div class="progress-label">Respondidas: <strong id="answered-count">0</strong>/10</div>
-    <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
-    <div class="progress-dots" id="progress-dots"></div>
-  </div>
+  <div class="main">
 
-  <!-- QUESTÕES -->
-  <div id="questions-container"></div>
-
-  <!-- SUBMIT -->
-  <div class="submit-area" id="submit-area" style="display:none">
-    <button class="btn-submit" id="btn-submit" onclick="submitQuiz()" disabled>
-      Enviar Respostas →
-    </button>
-    <div class="submit-hint" id="submit-hint">Responda todas as questões para enviar.</div>
-  </div>
-
-  <!-- RESULTADO -->
-  <div id="result-wrapper">
-    <div class="sending-banner" id="sending-banner">
-      <div class="spinner" id="sending-spinner"></div>
-      <span id="sending-text">Enviando suas respostas…</span>
-    </div>
-    <div class="result-hero">
-      <span class="result-emoji" id="res-emoji">🎉</span>
-      <div class="result-score" id="res-score"></div>
-      <div class="stars-row" id="stars-row"></div>
-      <div class="result-name" id="res-name"></div>
-      <div class="result-turma" id="res-turma"></div>
-      <div class="result-msg" id="res-msg"></div>
-    </div>
-    <div class="q-card" style="margin-bottom:14px">
-      <div class="card-title"><span>📋</span> Revisão das Questões</div>
-      <div class="review-list" id="review-list"></div>
-    </div>
-    <button class="btn-retry" onclick="resetQuiz()">🔄 Refazer Atividade</button>
-  </div>
-
-</div>
-
-<script>
-// CONFIGURAÇÃO DE ENVIO (Apps Script)
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyku30cGOaPoeeDM2JDUbH4-5giJzeKMVzC61EIGgGwUyP4VxNkJuiP-r-bZdt32ZNV/exec';
-const SCHOOL_ID = 'LKM6';
-
-// ALUNOS
-const STUDENTS = {
-  '6A': [
-    'ESTER VITORIA FELIX DA CRUZ','PABLO LUCAS DA SILVA','VINICIUS BESERRA ARAUJO',
-    'PIETRO OLIVEIRA FREITAS','BYANCA DOS SANTOS PEREIRA','EDUARDA STHEFANY MARQUES DA SILVA',
-    'PEDRO LUCAS CRUZ PRIORI','SOPHIA GIOVANA OLIVEIRA ALVES','ANTONELLA ALVES XAVIER'
-  ],
-  '6B': [
-    'ALICE ALVES BRITO DA COSTA','MILLENA OLIVEIRA DOS SANTOS','MIGUEL CERCUNDO TEODORO',
-    'DAVI LUIZ CARDOSO BARBOSA','ANNA JULIA CARVALHO MARQUES','PIETRO GABRIEL VIEIRA DA SILVA',
-    'MIGUEL GOUVEA CARDOSO','SARA CAROLINE FONSECA PORFIRIO','LAURA VITORIA JESUS SOUZA',
-    'THAYLA EMANOELLY ANDRADE FIDELIS','MIGUEL OLIVEIRA ALVES','MANUELA ELI DOS SANTOS SILVA',
-    'NICOLE FERREIRA SANTOS','MIGUEL SILVA SOUZA','JAMILY FERNANDA GONZALES ADUVIRI',
-    'DAVI HENRIQUE SILVA DE MELO','MARIA EDUARDA RIBEIRO DE OLIVEIRA ROCHA'
-  ],
-  '6C': [
-    'FELIPE GABRIEL ALVES ARAUJO','VICTOR JUNIOR TENORIO COSTA','DAVI LUCAS MATIAS RIBEIRO',
-    'KAROLINA APARECIDA DE LIRA','BRAYAN DE OLIVEIRA LOPES','MANUELLA DE MORAES SILVA',
-    'CARLOS HENRIQUE ROSA PAULINO','MATEUS HENRIQUE SOUSA SANTOS',
-    'MIQUEIAS DEL VALLE ISAIAS MAGALHAES','JOHN GRIGORIO SILVA','MIQUEIAS PAULINO SILVA'
-  ]
-};
-const TURMA_LABEL = { '6A':'6º Ano A', '6B':'6º Ano B', '6C':'6º Ano C' };
-
-// QUESTÕES
-const QUESTIONS = [
-  {
-    id: 'q1',
-    theme: 'Aula 1 – Camadas da Terra',
-    text: 'O planeta Terra é dividido em camadas. O conjunto de todas as regiões habitadas por seres vivos recebe o nome de:',
-    image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/QpEdjXRCiCISikPK.jpg',
-    opts: [
-      { key: 'a', label: 'Litosfera' },
-      { key: 'b', label: 'Atmosfera' },
-      { key: 'c', label: 'Biosfera' },
-      { key: 'd', label: 'Hidrosfera' }
-    ],
-    correct: 'c',
-    feedback: '✅ A biosfera é o conjunto de todos os ambientes da Terra habitados por seres vivos. A litosfera é a camada sólida (rochas e solo); a atmosfera é a camada de gases; e a hidrosfera é a porção de água.'
-  },
-  {
-    id: 'q2',
-    theme: 'Aula 2 – Atmosfera',
-    text: 'A palavra "atmosfera" vem do grego e significa "esfera de gases". A camada da Terra formada por gases que envolve o planeta é a:',
-    image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/MBVhayOwirCCYTUg.jpg',
-    opts: [
-      { key: 'a', label: 'Hidrosfera' },
-      { key: 'b', label: 'Litosfera' },
-      { key: 'c', label: 'Biosfera' },
-      { key: 'd', label: 'Atmosfera' }
-    ],
-    correct: 'd',
-    feedback: '✅ A atmosfera é a camada gasosa que envolve a Terra. Ela é essencial para a vida pois contém o oxigênio que respiramos, protege dos raios ultravioleta e regula a temperatura do planeta.'
-  },
-  {
-    id: 'q3',
-    theme: 'Aula 3 – Hidrosfera',
-    text: 'A água é o principal componente do corpo dos seres vivos. Os seres humanos têm cerca de quanto do organismo constituído de água?',
-    image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/oJuzqwijooAKraLN.jpg',
-    opts: [
-      { key: 'a', label: '25%' },
-      { key: 'b', label: '50%' },
-      { key: 'c', label: '75%' },
-      { key: 'd', label: '95%' }
-    ],
-    correct: 'c',
-    feedback: '✅ O corpo humano é formado por cerca de 75% de água. A água está presente no sangue, nas células, nos órgãos e é essencial para todos os processos metabólicos do organismo.'
-  },
-  {
-    id: 'q4',
-    theme: 'Aula 4 – Estados da matéria',
-    text: 'Matéria é tudo que tem massa e ocupa lugar no espaço. Após um dia de chuva, uma poça de água formou-se na rua e no dia seguinte havia desaparecido. Qual mudança de estado físico explica esse fenômeno?',
-    image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/ijZvkNPJqfisnQiG.png',
-    opts: [
-      { key: 'a', label: 'Solidificação – a água virou gelo' },
-      { key: 'b', label: 'Fusão – a água derreteu' },
-      { key: 'c', label: 'Evaporação – a água passou para o estado gasoso' },
-      { key: 'd', label: 'Condensação – o vapor virou água' }
-    ],
-    correct: 'c',
-    feedback: '✅ A evaporação (ou vaporização) é a mudança do estado líquido para o gasoso. Com o calor do sol, as moléculas de água da poça ganharam energia e passaram para o estado de vapor, dispersando-se no ar.'
-  },
-  {
-    id: 'q5',
-    theme: 'Aula 5 – Ciclo da água',
-    text: 'Sobre a origem da água na Terra, existem duas hipóteses principais. Uma delas afirma que a água chegou à Terra por meio de:',
-    image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/haPcoReUCBLsdPvG.jpg',
-    opts: [
-      { key: 'a', label: 'Vulcões que lançaram vapor d\'água para a atmosfera durante bilhões de anos' },
-      { key: 'b', label: 'Colisão de cometas e outros corpos celestes contendo grandes quantidades de água' },
-      { key: 'c', label: 'Reações químicas entre o hidrogênio e o oxigênio presentes no solo' },
-      { key: 'd', label: 'Evaporação dos oceanos de planetas vizinhos transportada pelo vento solar' }
-    ],
-    correct: 'b',
-    feedback: '✅ Uma das hipóteses é que a água chegou à Terra pela colisão de cometas e asteroides ricos em água. A outra hipótese defende que a água sempre esteve presente desde a formação do planeta.'
-  },
-  {
-    id: 'q6',
-    theme: 'Aula 5 – Ciclo da água',
-    text: 'Aproximadamente quanto da superfície do nosso planeta é coberta por água?',
-    image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/GDShOdcEQHUOhCoM.jpg',
-    opts: [
-      { key: 'a', label: '30%' },
-      { key: 'b', label: '50%' },
-      { key: 'c', label: '70%' },
-      { key: 'd', label: '90%' }
-    ],
-    correct: 'c',
-    feedback: '✅ Cerca de 70% da superfície terrestre é coberta por água, por isso a Terra também é chamada de "planeta azul". No entanto, a maior parte dessa água é salgada e está nos oceanos.'
-  },
-  {
-    id: 'q7',
-    theme: 'Aula 7 – Biosfera',
-    text: 'O planeta Terra pode ser dividido em camadas: atmosfera, hidrosfera, litosfera e biosfera. Qual das alternativas descreve CORRETAMENTE o que forma a litosfera?',
-    image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/hVOkElzOhHSnEMBE.jpg',
-    opts: [
-      { key: 'a', label: 'A camada gasosa que envolve o planeta' },
-      { key: 'b', label: 'Toda a água presente na superfície e no interior da Terra' },
-      { key: 'c', label: 'A camada sólida formada pela crosta terrestre e parte do manto superior' },
-      { key: 'd', label: 'O conjunto de todos os ambientes habitados por seres vivos' }
-    ],
-    correct: 'c',
-    feedback: '✅ A litosfera é a camada sólida formada pela crosta terrestre juntamente com uma fração do manto superior. É a camada onde vivemos e onde estão as rochas e o solo.'
-  },
-  {
-    id: 'q8',
-    theme: 'Aula 9 – Litosfera: tipos de rochas',
-    text: 'O planeta Terra é formado por três camadas principais. Da mais externa para a mais interna, a ordem correta dessas camadas é:',
-    image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/oVElvxmgCAYakScF.jpg',
-    opts: [
-      { key: 'a', label: 'Núcleo → Manto → Crosta terrestre' },
-      { key: 'b', label: 'Crosta terrestre → Manto → Núcleo' },
-      { key: 'c', label: 'Manto → Crosta terrestre → Núcleo' },
-      { key: 'd', label: 'Crosta terrestre → Núcleo → Manto' }
-    ],
-    correct: 'b',
-    feedback: '✅ Da superfície para o interior da Terra temos: Crosta terrestre (camada mais externa e fina) → Manto (camada intermediária, a mais espessa) → Núcleo (camada mais interna, extremamente quente).'
-  },
-  {
-    id: 'q9',
-    theme: 'Aula 15 – Substâncias puras',
-    text: 'Um pesquisador produziu em laboratório a substância C₆H₁₂O₆ (glicose). Com base nos elementos químicos presentes na fórmula, essa substância é classificada como:',
-    image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/HkXEykKYJIzQGpAY.jpg',
-    opts: [
-      { key: 'a', label: 'Substância pura simples, pois é formada por átomos de um único elemento' },
-      { key: 'b', label: 'Substância pura composta, pois é formada por átomos de dois ou mais elementos químicos diferentes' },
-      { key: 'c', label: 'Mistura homogênea, pois os componentes não podem ser separados' },
-      { key: 'd', label: 'Substância impura, pois contém mais de uma molécula diferente' }
-    ],
-    correct: 'b',
-    feedback: '✅ A glicose (C₆H₁₂O₆) é uma substância pura composta, pois é formada por átomos de três elementos químicos diferentes: carbono (C), hidrogênio (H) e oxigênio (O). Substâncias simples são formadas por apenas um elemento (ex: H₂ ou O₃).'
-  },
-  {
-    id: 'q10',
-    theme: 'Aula 15 – Substâncias puras',
-    text: 'O gás hidrogênio (H₂) e o gás ozônio (O₃) são exemplos de substâncias puras simples. O que define uma substância como "pura simples"?',
-    image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/cUvKxFWkmtccbGuQ.jpg',
-    opts: [
-      { key: 'a', label: 'Ser formada por átomos de dois ou mais elementos químicos diferentes' },
-      { key: 'b', label: 'Ser encontrada apenas na natureza, sem intervenção humana' },
-      { key: 'c', label: 'Ser formada por átomos de um único elemento químico' },
-      { key: 'd', label: 'Não sofrer mudanças de estado físico com variação de temperatura' }
-    ],
-    correct: 'c',
-    feedback: '✅ Substâncias puras simples são formadas por átomos de um único elemento químico. O H₂ é formado apenas por hidrogênio, e o O₃ (ozônio) é formado apenas por oxigênio. Já substâncias compostas, como a água (H₂O), têm dois ou mais elementos diferentes.'
-  }
-];
-
-// ESTADO
-let selectedStudent = '', selectedTurma = '';
-let userAnswers = new Array(10).fill(null);
-let switchCount = 0;
-let submitted = false;
-let sentToServer = false;
-let qOrder = [];
-let startTime = null;
-
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden && startTime && !submitted) {
-    switchCount++;
-  }
-});
-
-function onTurmaChange() {
-  const t = document.getElementById('sel-turma').value;
-  const sel = document.getElementById('sel-aluno');
-  sel.innerHTML = '<option value="">— Selecione seu nome —</option>';
-  sel.disabled = !t;
-  clearQuiz();
-  if (t && STUDENTS[t]) {
-    STUDENTS[t].forEach(name => {
-      const o = document.createElement('option');
-      o.value = name;
-      o.textContent = cap(name);
-      sel.appendChild(o);
-    });
-  }
-}
-
-function onAlunoChange() {
-  const turma = document.getElementById('sel-turma').value;
-  const aluno = document.getElementById('sel-aluno').value;
-  clearQuiz();
-  if (!turma || !aluno) return;
-
-  selectedTurma = turma;
-  selectedStudent = aluno;
-  switchCount = 0;
-  startTime = new Date();
-
-  const chip = document.getElementById('student-chip');
-  chip.textContent = '👤 ' + cap(aluno);
-  chip.classList.add('visible');
-
-  qOrder = [...Array(QUESTIONS.length).keys()].sort(() => Math.random() - 0.5);
-  userAnswers = new Array(10).fill(null);
-  submitted = false;
-  sentToServer = false;
-
-  buildQuestions();
-  buildDots();
-
-  document.getElementById('questions-container').classList.add('visible');
-  document.getElementById('submit-area').style.display = 'block';
-  document.getElementById('progress-strip').classList.add('visible');
-  document.getElementById('result-wrapper').classList.remove('visible');
-}
-
-function clearQuiz() {
-  document.getElementById('questions-container').innerHTML = '';
-  document.getElementById('questions-container').classList.remove('visible');
-  document.getElementById('submit-area').style.display = 'none';
-  document.getElementById('progress-strip').classList.remove('visible');
-  document.getElementById('result-wrapper').classList.remove('visible');
-  document.getElementById('student-chip').classList.remove('visible');
-}
-
-function buildQuestions() {
-  const container = document.getElementById('questions-container');
-  container.innerHTML = '';
-  const letters = ['A','B','C','D'];
-
-  qOrder.forEach((qi, pos) => {
-    const q = QUESTIONS[qi];
-    const shuffledOpts = [...q.opts].sort(() => Math.random() - 0.5);
-
-    const card = document.createElement('div');
-    card.className = 'q-card';
-    card.id = 'qcard-' + pos;
-
-    let optsHTML = shuffledOpts.map((opt, i) => `
-      <button class="option" data-pos="${pos}" data-qid="${q.id}" data-key="${opt.key}" onclick="selectOpt(this)">
-        <div class="opt-letter">${letters[i]}</div>
-        <div>${opt.label}</div>
-      </button>`).join('');
-
-    card.innerHTML = `
-      <div class="q-header">
-        <div class="q-num-badge">Questão ${pos + 1}</div>
-        <div class="q-theme">${q.theme}</div>
+    <!-- IDENTIFICAÇÃO -->
+    <div class="id-row">
+      <div class="sel-group">
+        <div class="sel-label">Turma</div>
+        <select id="sel-turma" onchange="onTurmaChange()">
+          <option value="">— Selecione —</option>
+          <option value="6A">6º Ano A</option>
+          <option value="6B">6º Ano B</option>
+          <option value="6C">6º Ano C</option>
+        </select>
       </div>
-      <div class="q-text">${q.text}</div>
-      ${q.image ? `<div class="q-image-container"><img src="${q.image}" class="q-image" alt="Ilustração da questão"></div>` : ''}
-      <div class="options" id="opts-${pos}">${optsHTML}</div>
-      <div class="q-feedback" id="fb-${pos}"></div>`;
+      <div class="sel-group">
+        <div class="sel-label">Seu nome</div>
+        <select id="sel-aluno" disabled onchange="onAlunoChange()">
+          <option value="">— Selecione a turma —</option>
+        </select>
+      </div>
+      <div class="student-chip" id="student-chip">👤</div>
+    </div>
 
-    container.appendChild(card);
-  });
-}
+    <!-- PROGRESS STRIP (sticky) -->
+    <div class="progress-strip" id="progress-strip">
+      <div class="progress-label">Respondidas: <strong id="answered-count">0</strong>/10</div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+      <div class="progress-dots" id="progress-dots"></div>
+    </div>
 
-function buildDots() {
-  const dotsEl = document.getElementById('progress-dots');
-  dotsEl.innerHTML = '';
-  for (let i = 0; i < 10; i++) {
-    const d = document.createElement('div');
-    d.className = 'dot';
-    d.id = 'dot-' + i;
-    dotsEl.appendChild(d);
-  }
-}
+    <!-- QUESTÕES -->
+    <div id="questions-container"></div>
 
-function selectOpt(btn) {
-  if (submitted) return;
-  const pos = parseInt(btn.dataset.pos);
-  const qid = btn.dataset.qid;
-  const chosenKey = btn.dataset.key;
-  if (userAnswers[pos] !== null) return;
+    <!-- SUBMIT -->
+    <div class="submit-area" id="submit-area" style="display:none">
+      <button class="btn-submit" id="btn-submit" onclick="submitQuiz()" disabled>
+        Enviar Respostas →
+      </button>
+      <div class="submit-hint" id="submit-hint">Responda todas as questões para enviar.</div>
+    </div>
 
-  const q = QUESTIONS.find(item => item.id === qid);
-  const isCorrect = chosenKey === q.correct;
-  userAnswers[pos] = { qid, key: chosenKey, correct: isCorrect };
+    <!-- RESULTADO -->
+    <div id="result-wrapper">
+      <div class="sending-banner" id="sending-banner">
+        <div class="spinner" id="sending-spinner"></div>
+        <span id="sending-text">Enviando suas respostas…</span>
+      </div>
+      <div class="result-hero">
+        <span class="result-emoji" id="res-emoji">🎉</span>
+        <div class="result-score" id="res-score"></div>
+        <div class="stars-row" id="stars-row"></div>
+        <div class="result-name" id="res-name"></div>
+        <div class="result-turma" id="res-turma"></div>
+        <div class="result-msg" id="res-msg"></div>
+      </div>
+      <div class="q-card" style="margin-bottom:14px">
+        <div class="card-title"><span>📋</span> Revisão das Questões</div>
+        <div class="review-list" id="review-list"></div>
+      </div>
+    </div>
 
-  const opts = document.querySelectorAll(`#opts-${pos} .option`);
-  opts.forEach(b => { b.classList.add('locked'); b.disabled = true; });
+  </div>
 
-  if (isCorrect) {
-    btn.classList.add('correct');
-    document.getElementById('qcard-' + pos).classList.add('answered-correct');
-    document.getElementById('dot-' + pos).classList.add('ok');
-  } else {
-    btn.classList.add('wrong');
-    const correctBtn = Array.from(opts).find(b => b.dataset.key === q.correct);
-    if (correctBtn) correctBtn.classList.add('correct');
-    document.getElementById('qcard-' + pos).classList.add('answered-wrong');
-    document.getElementById('dot-' + pos).classList.add('fail');
-  }
+  <script>
+    // CONFIGURAÇÃO DE ENVIO (Apps Script)
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyku30cGOaPoeeDM2JDUbH4-5giJzeKMVzC61EIGgGwUyP4VxNkJuiP-r-bZdt32ZNV/exec';
+    const SCHOOL_ID = 'LKM6';
 
-  const done = userAnswers.filter(a => a !== null).length;
-  document.getElementById('answered-count').textContent = done;
-  document.getElementById('progress-fill').style.width = (done / 10 * 100) + '%';
+    // ALUNOS
+    const STUDENTS = {
+      '6A': [
+        'ESTER VITORIA FELIX DA CRUZ', 'PABLO LUCAS DA SILVA', 'VINICIUS BESERRA ARAUJO',
+        'PIETRO OLIVEIRA FREITAS', 'BYANCA DOS SANTOS PEREIRA', 'EDUARDA STHEFANY MARQUES DA SILVA',
+        'PEDRO LUCAS CRUZ PRIORI', 'SOPHIA GIOVANA OLIVEIRA ALVES', 'ANTONELLA ALVES XAVIER'
+      ],
+      '6B': [
+        'ALICE ALVES BRITO DA COSTA', 'MILLENA OLIVEIRA DOS SANTOS', 'MIGUEL CERCUNDO TEODORO',
+        'DAVI LUIZ CARDOSO BARBOSA', 'ANNA JULIA CARVALHO MARQUES', 'PIETRO GABRIEL VIEIRA DA SILVA',
+        'MIGUEL GOUVEA CARDOSO', 'SARA CAROLINE FONSECA PORFIRIO', 'LAURA VITORIA JESUS SOUZA',
+        'THAYLA EMANOELLY ANDRADE FIDELIS', 'MIGUEL OLIVEIRA ALVES', 'MANUELA ELI DOS SANTOS SILVA',
+        'NICOLE FERREIRA SANTOS', 'MIGUEL SILVA SOUZA', 'JAMILY FERNANDA GONZALES ADUVIRI',
+        'DAVI HENRIQUE SILVA DE MELO', 'MARIA EDUARDA RIBEIRO DE OLIVEIRA ROCHA'
+      ],
+      '6C': [
+        'FELIPE GABRIEL ALVES ARAUJO', 'VICTOR JUNIOR TENORIO COSTA', 'DAVI LUCAS MATIAS RIBEIRO',
+        'KAROLINA APARECIDA DE LIRA', 'BRAYAN DE OLIVEIRA LOPES', 'MANUELLA DE MORAES SILVA',
+        'CARLOS HENRIQUE ROSA PAULINO', 'MATEUS HENRIQUE SOUSA SANTOS',
+        'MIQUEIAS DEL VALLE ISAIAS MAGALHAES', 'JOHN GRIGORIO SILVA', 'MIQUEIAS PAULINO SILVA'
+      ]
+    };
+    const TURMA_LABEL = { '6A': '6º Ano A', '6B': '6º Ano B', '6C': '6º Ano C' };
 
-  if (done === 10) {
-    document.getElementById('btn-submit').disabled = false;
-    document.getElementById('submit-hint').textContent = 'Todas as questões respondidas. Pronto para enviar!';
-    document.getElementById('submit-hint').style.color = 'var(--accent2)';
-  } else {
-    document.getElementById('submit-hint').textContent = `Faltam ${10 - done} questão(ões) para enviar.`;
-  }
-}
+    // QUESTÕES
+    const QUESTIONS = [{
+      id: 'q1',
+      theme: 'Aula 1 – Camadas da Terra',
+      text: 'O planeta Terra é dividido em camadas. O conjunto de todas as regiões habitadas por seres vivos recebe o nome de:',
+      image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/QpEdjXRCiCISikPK.jpg',
+      opts: [
+        { key: 'a', label: 'Litosfera' },
+        { key: 'b', label: 'Atmosfera' },
+        { key: 'c', label: 'Biosfera' },
+        { key: 'd', label: 'Hidrosfera' }
+      ],
+      correct: 'c',
+      feedback: '✅ A biosfera é o conjunto de todos os ambientes da Terra habitados por seres vivos. A litosfera é a camada sólida (rochas e solo); a atmosfera é a camada de gases; e a hidrosfera é a porção de água.'
+    }, {
+      id: 'q2',
+      theme: 'Aula 2 – Atmosfera',
+      text: 'A palavra "atmosfera" vem do grego e significa "esfera de gases". A camada da Terra formada por gases que envolve o planeta é a:',
+      image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/MBVhayOwirCCYTUg.jpg',
+      opts: [
+        { key: 'a', label: 'Hidrosfera' },
+        { key: 'b', label: 'Litosfera' },
+        { key: 'c', label: 'Biosfera' },
+        { key: 'd', label: 'Atmosfera' }
+      ],
+      correct: 'd',
+      feedback: '✅ A atmosfera é a camada gasosa que envolve a Terra. Ela é essencial para a vida pois contém o oxigênio que respiramos, protege dos raios ultravioleta e regula a temperatura do planeta.'
+    }, {
+      id: 'q3',
+      theme: 'Aula 3 – Hidrosfera',
+      text: 'A água é o principal componente do corpo dos seres vivos. Os seres humanos têm cerca de quanto do organismo constituído de água?',
+      image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/oJuzqwijooAKraLN.jpg',
+      opts: [
+        { key: 'a', label: '25%' },
+        { key: 'b', label: '50%' },
+        { key: 'c', label: '75%' },
+        { key: 'd', label: '95%' }
+      ],
+      correct: 'c',
+      feedback: '✅ O corpo humano é formado por cerca de 75% de água. A água está presente no sangue, nas células, nos órgãos e é essencial para todos os processos metabólicos do organismo.'
+    }, {
+      id: 'q4',
+      theme: 'Aula 4 – Estados da matéria',
+      text: 'Matéria é tudo que tem massa e ocupa lugar no espaço. Após um dia de chuva, uma poça de água formou-se na rua e no dia seguinte havia desaparecido. Qual mudança de estado físico explica esse fenômeno?',
+      image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/ijZvkNPJqfisnQiG.png',
+      opts: [
+        { key: 'a', label: 'Solidificação – a água virou gelo' },
+        { key: 'b', label: 'Fusão – a água derreteu' },
+        { key: 'c', label: 'Evaporação – a água passou para o estado gasoso' },
+        { key: 'd', label: 'Condensação – o vapor virou água' }
+      ],
+      correct: 'c',
+      feedback: '✅ A evaporação (ou vaporização) é a mudança do estado líquido para o gasoso. Com o calor do sol, as moléculas de água da poça ganharam energia e passaram para o estado de vapor, dispersando-se no ar.'
+    }, {
+      id: 'q5',
+      theme: 'Aula 5 – Ciclo da água',
+      text: 'Sobre a origem da água na Terra, existem duas hipóteses principais. Uma delas afirma que a água chegou à Terra por meio de:',
+      image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/haPcoReUCBLsdPvG.jpg',
+      opts: [
+        { key: 'a', label: 'Vulcões que lançaram vapor d\'água para a atmosfera durante bilhões de anos' },
+        { key: 'b', label: 'Colisão de cometas e outros corpos celestes contendo grandes quantidades de água' },
+        { key: 'c', label: 'Reações químicas entre o hidrogênio e o oxigênio presentes no solo' },
+        { key: 'd', label: 'Evaporação dos oceanos de planetas vizinhos transportada pelo vento solar' }
+      ],
+      correct: 'b',
+      feedback: '✅ Uma das hipóteses é que a água chegou à Terra pela colisão de cometas e asteroides ricos em água. A outra hipótese defende que a água sempre esteve presente desde a formação do planeta.'
+    }, {
+      id: 'q6',
+      theme: 'Aula 5 – Ciclo da água',
+      text: 'Aproximadamente quanto da superfície do nosso planeta é coberta por água?',
+      image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/GDShOdcEQHUOhCoM.jpg',
+      opts: [
+        { key: 'a', label: '30%' },
+        { key: 'b', label: '50%' },
+        { key: 'c', label: '70%' },
+        { key: 'd', label: '90%' }
+      ],
+      correct: 'c',
+      feedback: '✅ Cerca de 70% da superfície terrestre é coberta por água, por isso a Terra também é chamada de "planeta azul". No entanto, a maior parte dessa água é salgada e está nos oceanos.'
+    }, {
+      id: 'q7',
+      theme: 'Aula 7 – Biosfera',
+      text: 'O planeta Terra pode ser dividido em camadas: atmosfera, hidrosfera, litosfera e biosfera. Qual das alternativas descreve CORRETAMENTE o que forma a litosfera?',
+      image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/hVOkElzOhHSnEMBE.jpg',
+      opts: [
+        { key: 'a', label: 'A camada gasosa que envolve o planeta' },
+        { key: 'b', label: 'Toda a água presente na superfície e no interior da Terra' },
+        { key: 'c', label: 'A camada sólida formada pela crosta terrestre e parte do manto superior' },
+        { key: 'd', label: 'O conjunto de todos os ambientes habitados por seres vivos' }
+      ],
+      correct: 'c',
+      feedback: '✅ A litosfera é a camada sólida formada pela crosta terrestre juntamente com uma fração do manto superior. É a camada onde vivemos e onde estão as rochas e o solo.'
+    }, {
+      id: 'q8',
+      theme: 'Aula 9 – Litosfera: tipos de rochas',
+      text: 'O planeta Terra é formado por três camadas principais. Da mais externa para a mais interna, a ordem correta dessas camadas é:',
+      image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/oVElvxmgCAYakScF.jpg',
+      opts: [
+        { key: 'a', label: 'Núcleo → Manto → Crosta terrestre' },
+        { key: 'b', label: 'Crosta terrestre → Manto → Núcleo' },
+        { key: 'c', label: 'Manto → Crosta terrestre → Núcleo' },
+        { key: 'd', label: 'Crosta terrestre → Núcleo → Manto' }
+      ],
+      correct: 'b',
+      feedback: '✅ Da superfície para o interior da Terra temos: Crosta terrestre (camada mais externa e fina) → Manto (camada intermediária, a mais espessa) → Núcleo (camada mais interna, extremamente quente).'
+    }, {
+      id: 'q9',
+      theme: 'Aula 15 – Substâncias puras',
+      text: 'Um pesquisador produziu em laboratório a substância C₆H₁₂O₆ (glicose). Com base nos elementos químicos presentes na fórmula, essa substância é classificada como:',
+      image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/HkXEykKYJIzQGpAY.jpg',
+      opts: [
+        { key: 'a', label: 'Substância pura simples, pois é formada por átomos de um único elemento' },
+        { key: 'b', label: 'Substância pura composta, pois é formada por átomos de dois ou mais elementos químicos diferentes' },
+        { key: 'c', label: 'Mistura homogênea, pois os componentes não podem ser separados' },
+        { key: 'd', label: 'Substância impura, pois contém mais de uma molécula diferente' }
+      ],
+      correct: 'b',
+      feedback: '✅ A glicose (C₆H₁₂O₆) é uma substância pura composta, pois é formada por átomos de três elementos químicos diferentes: carbono (C), hidrogênio (H) e oxigênio (O). Substâncias simples são formadas por apenas um elemento (ex: H₂ ou O₃).'
+    }, {
+      id: 'q10',
+      theme: 'Aula 15 – Substâncias puras',
+      text: 'O gás hidrogênio (H₂) e o gás ozônio (O₃) são exemplos de substâncias puras simples. O que define uma substância como "pura simples"?',
+      image: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663128604512/cUvKxFWkmtccbGuQ.jpg',
+      opts: [
+        { key: 'a', label: 'Ser formada por átomos de dois ou mais elementos químicos diferentes' },
+        { key: 'b', label: 'Ser encontrada apenas na natureza, sem intervenção humana' },
+        { key: 'c', label: 'Ser formada por átomos de um único elemento químico' },
+        { key: 'd', label: 'Não sofrer mudanças de estado físico com variação de temperatura' }
+      ],
+      correct: 'c',
+      feedback: '✅ Substâncias puras simples são formadas por átomos de um único elemento químico. O H₂ é formado apenas por hidrogênio, e o O₃ (ozônio) é formado apenas por oxigênio. Já substâncias compostas, como a água (H₂O), têm dois ou mais elementos diferentes.'
+    }];
 
-function submitQuiz() {
-  if (userAnswers.filter(a => a !== null).length < 10) return;
-  submitted = true;
-  document.getElementById('btn-submit').disabled = true;
+    // ESTADO
+    let selectedStudent = '',
+      selectedTurma = '';
+    let userAnswers = new Array(10).fill(null);
+    let switchCount = 0;
+    let submitted = false;
+    let sentToServer = false;
+    let qOrder = [];
+    let startTime = null;
 
-  qOrder.forEach((qi, pos) => {
-    const q = QUESTIONS[qi];
-    const a = userAnswers[pos];
-    const fb = document.getElementById('fb-' + pos);
-    const isCorrect = a && a.correct;
-    fb.className = 'q-feedback ' + (isCorrect ? 'correct' : 'wrong');
-    fb.innerHTML = isCorrect
-      ? q.feedback
-      : '❌ Resposta incorreta. ' + q.feedback.replace('✅','💡');
-    fb.style.display = 'block';
-  });
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden && startTime && !submitted) {
+        switchCount++;
+      }
+    });
 
-  showResult();
-  sendToAppsScript();
-}
-
-function sendToAppsScript() {
-  if (sentToServer) return;
-  sentToServer = true;
-
-  const banner = document.getElementById('sending-banner');
-  const text = document.getElementById('sending-text');
-  const spinner = document.getElementById('sending-spinner');
-  banner.classList.remove('error', 'ok');
-  banner.classList.add('visible');
-  spinner.style.display = 'block';
-  text.textContent = 'Enviando suas respostas…';
-
-  const payload = {
-    school: SCHOOL_ID,
-    sheetName: selectedTurma,
-    studentName: selectedStudent,
-    studentGrade: TURMA_LABEL[selectedTurma] || selectedTurma,
-    date: new Date().toLocaleDateString('pt-BR'),
-    switchCount: switchCount
-  };
-
-  QUESTIONS.forEach(q => {
-    const pos = qOrder.indexOf(QUESTIONS.indexOf(q));
-    const ans = userAnswers[pos];
-    payload[q.id] = ans ? ans.key : '';
-  });
-
-  const jsonStr = JSON.stringify(payload);
-  const dataB64 = btoa(unescape(encodeURIComponent(jsonStr)));
-  const callbackName = 'lkm6Callback_' + Date.now();
-
-  window[callbackName] = function(response) {
-    delete window[callbackName];
-    if (script.parentNode) script.parentNode.removeChild(script);
-    if (response && response.status === 'ok') {
-      banner.classList.add('ok');
-      spinner.style.display = 'none';
-      text.textContent = '✅ Respostas registradas com sucesso!';
-      setTimeout(() => banner.classList.remove('visible'), 3500);
-    } else {
-      banner.classList.add('error');
-      spinner.style.display = 'none';
-      text.textContent = '⚠️ Não foi possível registrar automaticamente. Avise seu professor.';
+    function onTurmaChange() {
+      const t = document.getElementById('sel-turma').value;
+      const sel = document.getElementById('sel-aluno');
+      sel.innerHTML = '<option value="">— Selecione seu nome —</option>';
+      sel.disabled = !t;
+      clearQuiz();
+      if (t && STUDENTS[t]) {
+        STUDENTS[t].forEach(name => {
+          const o = document.createElement('option');
+          o.value = name;
+          o.textContent = cap(name);
+          sel.appendChild(o);
+        });
+      }
     }
-  };
 
-  const script = document.createElement('script');
-  const url = SCRIPT_URL + '?data=' + encodeURIComponent(dataB64) + '&callback=' + callbackName;
-  script.src = url;
-  script.onerror = function() {
-    delete window[callbackName];
-    banner.classList.add('error');
-    spinner.style.display = 'none';
-    text.textContent = '⚠️ Falha de conexão ao registrar. Avise seu professor.';
-  };
-  document.body.appendChild(script);
-}
+    function onAlunoChange() {
+      const turma = document.getElementById('sel-turma').value;
+      const aluno = document.getElementById('sel-aluno').value;
+      clearQuiz();
+      if (!turma || !aluno) return;
 
-function showResult() {
-  const score = userAnswers.filter(a => a && a.correct).length;
-  const pct = score / 10;
+      selectedTurma = turma;
+      selectedStudent = aluno;
+      switchCount = 0;
+      startTime = new Date();
 
-  document.getElementById('result-wrapper').classList.add('visible');
-  document.getElementById('res-score').textContent = score + '/10';
-  document.getElementById('res-score').className = 'result-score ' +
-    (pct >= 0.7 ? 'score-green' : pct >= 0.5 ? 'score-yellow' : 'score-red');
-  document.getElementById('res-emoji').textContent =
-    pct >= 0.9 ? '🏆' : pct >= 0.7 ? '🎉' : pct >= 0.5 ? '📚' : '💪';
-  document.getElementById('res-name').textContent = '👤 ' + cap(selectedStudent);
-  document.getElementById('res-turma').textContent = TURMA_LABEL[selectedTurma] + ' — Ciências — Recuperação';
-  document.getElementById('res-msg').textContent =
-    pct >= 0.9 ? 'Excelente! Você domina os conteúdos do bimestre.' :
-    pct >= 0.7 ? 'Muito bom! Revise os tópicos que errou para consolidar.' :
-    pct >= 0.5 ? 'Continue estudando! Revise as aulas com atenção.' :
-    'Não desista! Retome as aulas com calma e tente novamente.';
+      const chip = document.getElementById('student-chip');
+      chip.textContent = '👤 ' + cap(aluno);
+      chip.classList.add('visible');
 
-  const starsEl = document.getElementById('stars-row');
-  starsEl.innerHTML = '';
-  const starCount = Math.round(score / 2);
-  for (let i = 0; i < 5; i++) {
-    const s = document.createElement('div');
-    s.className = 'star' + (i < starCount ? ' lit' : '');
-    s.textContent = '⭐'; starsEl.appendChild(s);
-  }
+      qOrder = [...Array(QUESTIONS.length).keys()].sort(() => Math.random() - 0.5);
+      userAnswers = new Array(10).fill(null);
+      submitted = false;
+      sentToServer = false;
 
-  const rl = document.getElementById('review-list');
-  rl.innerHTML = '';
-  qOrder.forEach((qi, pos) => {
-    const q = QUESTIONS[qi];
-    const a = userAnswers[pos];
-    const ok = a && a.correct;
-    const div = document.createElement('div');
-    div.className = 'review-item ' + (ok ? 'ok' : 'fail');
-    div.innerHTML = `<div class="review-qtext">${pos+1}. ${q.text.length > 85 ? q.text.slice(0,85)+'…' : q.text}</div>
-      <div class="review-detail">${ok ? '<span class="green">✔ Correta</span>' : '<span class="red">✘ Incorreta</span>'}</div>`;
-    rl.appendChild(div);
-  });
+      buildQuestions();
+      buildDots();
 
-  setTimeout(() => document.getElementById('result-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
-}
+      document.getElementById('questions-container').classList.add('visible');
+      document.getElementById('submit-area').style.display = 'block';
+      document.getElementById('progress-strip').classList.add('visible');
+      document.getElementById('result-wrapper').classList.remove('visible');
+    }
 
-function resetQuiz() {
-  document.getElementById('result-wrapper').classList.remove('visible');
-  document.getElementById('sending-banner').classList.remove('visible', 'ok', 'error');
-  document.getElementById('sel-turma').value = '';
-  document.getElementById('sel-aluno').innerHTML = '<option value="">— Selecione a turma —</option>';
-  document.getElementById('sel-aluno').disabled = true;
-  clearQuiz();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+    function clearQuiz() {
+      document.getElementById('questions-container').innerHTML = '';
+      document.getElementById('questions-container').classList.remove('visible');
+      document.getElementById('submit-area').style.display = 'none';
+      document.getElementById('progress-strip').classList.remove('visible');
+      document.getElementById('result-wrapper').classList.remove('visible');
+      document.getElementById('student-chip').classList.remove('visible');
+    }
 
-function cap(n) {
-  return n.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
-}
-</script>
+    function buildQuestions() {
+      const container = document.getElementById('questions-container');
+      container.innerHTML = '';
+      const letters = ['A', 'B', 'C', 'D'];
+
+      qOrder.forEach((qi, pos) => {
+        const q = QUESTIONS[qi];
+        const shuffledOpts = [...q.opts].sort(() => Math.random() - 0.5);
+
+        const card = document.createElement('div');
+        card.className = 'q-card';
+        card.id = 'qcard-' + pos;
+
+        let optsHTML = shuffledOpts.map((opt, i) => `
+          <button class="option" data-pos="${pos}" data-qid="${q.id}" data-key="${opt.key}" onclick="selectOpt(this)">
+            <div class="opt-letter">${letters[i]}</div>
+            <div>${opt.label}</div>
+          </button>`).join('');
+
+        card.innerHTML = `
+          <div class="q-header">
+            <div class="q-num-badge">Questão ${pos + 1}</div>
+            <div class="q-theme">${q.theme}</div>
+          </div>
+          <div class="q-text">${q.text}</div>
+          ${q.image ? `<div class="q-image-container"><img src="${q.image}" class="q-image" alt="Ilustração da questão"></div>` : ''}
+          <div class="options" id="opts-${pos}">${optsHTML}</div>
+          <div class="q-feedback" id="fb-${pos}"></div>`;
+
+        container.appendChild(card);
+      });
+    }
+
+    function buildDots() {
+      const dotsEl = document.getElementById('progress-dots');
+      dotsEl.innerHTML = '';
+      for (let i = 0; i < 10; i++) {
+        const d = document.createElement('div');
+        d.className = 'dot';
+        d.id = 'dot-' + i;
+        dotsEl.appendChild(d);
+      }
+    }
+
+    function selectOpt(btn) {
+      if (submitted) return;
+      const pos = parseInt(btn.dataset.pos);
+      const qid = btn.dataset.qid;
+      const chosenKey = btn.dataset.key;
+      if (userAnswers[pos] !== null) return;
+
+      const q = QUESTIONS.find(item => item.id === qid);
+      const isCorrect = chosenKey === q.correct;
+      userAnswers[pos] = { qid, key: chosenKey, correct: isCorrect };
+
+      const opts = document.querySelectorAll(`#opts-${pos} .option`);
+      
+      // Remove selected de todas as opções e aplica na escolhida
+      opts.forEach(b => {
+        b.classList.remove('selected');
+      });
+      
+      // Aplica a classe selected na opção escolhida (efeito de alto relevo e degradê)
+      btn.classList.add('selected');
+      
+      // Bloqueia todas as opções
+      opts.forEach(b => { 
+        b.classList.add('locked');
+        b.disabled = true; 
+      });
+
+      // Marca como correta ou errada
+      if (isCorrect) {
+        btn.classList.add('correct');
+        document.getElementById('qcard-' + pos).classList.add('answered-correct');
+        document.getElementById('dot-' + pos).classList.add('ok');
+      } else {
+        btn.classList.add('wrong');
+        const correctBtn = Array.from(opts).find(b => b.dataset.key === q.correct);
+        if (correctBtn) correctBtn.classList.add('correct');
+        document.getElementById('qcard-' + pos).classList.add('answered-wrong');
+        document.getElementById('dot-' + pos).classList.add('fail');
+      }
+
+      const done = userAnswers.filter(a => a !== null).length;
+      document.getElementById('answered-count').textContent = done;
+      document.getElementById('progress-fill').style.width = (done / 10 * 100) + '%';
+
+      if (done === 10) {
+        document.getElementById('btn-submit').disabled = false;
+        document.getElementById('submit-hint').textContent = 'Todas as questões respondidas. Pronto para enviar!';
+        document.getElementById('submit-hint').style.color = 'var(--accent2)';
+      } else {
+        document.getElementById('submit-hint').textContent = `Faltam ${10 - done} questão(ões) para enviar.`;
+      }
+    }
+
+    function submitQuiz() {
+      if (userAnswers.filter(a => a !== null).length < 10) return;
+      submitted = true;
+      document.getElementById('btn-submit').disabled = true;
+
+      qOrder.forEach((qi, pos) => {
+        const q = QUESTIONS[qi];
+        const a = userAnswers[pos];
+        const fb = document.getElementById('fb-' + pos);
+        const isCorrect = a && a.correct;
+        fb.className = 'q-feedback ' + (isCorrect ? 'correct' : 'wrong');
+        fb.innerHTML = isCorrect ?
+          q.feedback :
+          '❌ Resposta incorreta. ' + q.feedback.replace('✅', '💡');
+        fb.style.display = 'block';
+      });
+
+      showResult();
+      sendToAppsScript();
+    }
+
+    function sendToAppsScript() {
+      if (sentToServer) return;
+      sentToServer = true;
+
+      const banner = document.getElementById('sending-banner');
+      const text = document.getElementById('sending-text');
+      const spinner = document.getElementById('sending-spinner');
+      banner.classList.remove('error', 'ok');
+      banner.classList.add('visible');
+      spinner.style.display = 'block';
+      text.textContent = 'Enviando suas respostas…';
+
+      const payload = {
+        school: SCHOOL_ID,
+        sheetName: selectedTurma,
+        studentName: selectedStudent,
+        studentGrade: TURMA_LABEL[selectedTurma] || selectedTurma,
+        date: new Date().toLocaleDateString('pt-BR'),
+        switchCount: switchCount
+      };
+
+      QUESTIONS.forEach(q => {
+        const pos = qOrder.indexOf(QUESTIONS.indexOf(q));
+        const ans = userAnswers[pos];
+        payload[q.id] = ans ? ans.key : '';
+      });
+
+      const jsonStr = JSON.stringify(payload);
+      const dataB64 = btoa(unescape(encodeURIComponent(jsonStr)));
+      const callbackName = 'lkm6Callback_' + Date.now();
+
+      window[callbackName] = function(response) {
+        delete window[callbackName];
+        if (script.parentNode) script.parentNode.removeChild(script);
+        if (response && response.status === 'ok') {
+          banner.classList.add('ok');
+          spinner.style.display = 'none';
+          text.textContent = '✅ Respostas registradas com sucesso!';
+          setTimeout(() => banner.classList.remove('visible'), 3500);
+        } else {
+          banner.classList.add('error');
+          spinner.style.display = 'none';
+          text.textContent = '⚠️ Não foi possível registrar automaticamente. Avise seu professor.';
+        }
+      };
+
+      const script = document.createElement('script');
+      const url = SCRIPT_URL + '?data=' + encodeURIComponent(dataB64) + '&callback=' + callbackName;
+      script.src = url;
+      script.onerror = function() {
+        delete window[callbackName];
+        banner.classList.add('error');
+        spinner.style.display = 'none';
+        text.textContent = '⚠️ Falha de conexão ao registrar. Avise seu professor.';
+      };
+      document.body.appendChild(script);
+    }
+
+    function showResult() {
+      const score = userAnswers.filter(a => a && a.correct).length;
+      const pct = score / 10;
+
+      document.getElementById('result-wrapper').classList.add('visible');
+      document.getElementById('res-score').textContent = score + '/10';
+      document.getElementById('res-score').className = 'result-score ' +
+        (pct >= 0.7 ? 'score-green' : pct >= 0.5 ? 'score-yellow' : 'score-red');
+      document.getElementById('res-emoji').textContent =
+        pct >= 0.9 ? '🏆' : pct >= 0.7 ? '🎉' : pct >= 0.5 ? '📚' : '💪';
+      document.getElementById('res-name').textContent = '👤 ' + cap(selectedStudent);
+      document.getElementById('res-turma').textContent = TURMA_LABEL[selectedTurma] + ' — Ciências — Recuperação';
+      document.getElementById('res-msg').textContent =
+        pct >= 0.9 ? 'Excelente! Você domina os conteúdos do bimestre.' :
+        pct >= 0.7 ? 'Muito bom! Revise os tópicos que errou para consolidar.' :
+        pct >= 0.5 ? 'Continue estudando! Revise as aulas com atenção.' :
+        'Não desista! Retome as aulas com calma e tente novamente.';
+
+      const starsEl = document.getElementById('stars-row');
+      starsEl.innerHTML = '';
+      const starCount = Math.round(score / 2);
+      for (let i = 0; i < 5; i++) {
+        const s = document.createElement('div');
+        s.className = 'star' + (i < starCount ? ' lit' : '');
+        s.textContent = '⭐';
+        starsEl.appendChild(s);
+      }
+
+      const rl = document.getElementById('review-list');
+      rl.innerHTML = '';
+      qOrder.forEach((qi, pos) => {
+        const q = QUESTIONS[qi];
+        const a = userAnswers[pos];
+        const ok = a && a.correct;
+        const div = document.createElement('div');
+        div.className = 'review-item ' + (ok ? 'ok' : 'fail');
+        div.innerHTML = `<div class="review-qtext">${pos+1}. ${q.text.length > 85 ? q.text.slice(0,85)+'…' : q.text}</div>
+          <div class="review-detail">${ok ? '<span class="green">✔ Correta</span>' : '<span class="red">✘ Incorreta</span>'}</div>`;
+        rl.appendChild(div);
+      });
+
+      setTimeout(() => document.getElementById('result-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }
+
+    function cap(n) {
+      return n.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+    }
+  </script>
 </body>
 </html>
